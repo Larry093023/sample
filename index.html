@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <div class="heading">
+            <h1>Logo</h1>
+        </div>
+    </header>
+
+    <nav>
+
+        <div class="nav-links">
+            <ul class="links"> 
+                <li>
+                    <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+                    <a id="active" href="#">Home</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Organizational Chart</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640H447l-80-80H160v480l96-320h684L837-217q-8 26-29.5 41.5T760-160H160Zm84-80h516l72-240H316l-72 240Zm0 0 72-240-72 240Zm-84-400v-80 80Z"/></svg>
+                    <a href="#">Files</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <div class="files-sub-menu">
+                                <a href="#">Brgy. Certification</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="files-sub-menu" onclick="togglePages()">
+                                <a href="#">Pages</a>
+                                <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"></svg>
+                            <ul class="files-sub-sub-menu">
+                                <li><a href="#">Household</a></li>
+                                <li><a href="#">Child Birth</a></li>
+                            </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M222-200 80-342l56-56 85 85 170-170 56 57-225 226Zm0-320L80-662l56-56 85 85 170-170 56 57-225 226Zm298 240v-80h360v80H520Zm0-320v-80h360v80H520Z"/></svg>
+                    <a href="#">E-survey</a>
+                        <ul class="sub-menu"> 
+                            <li><a href="#">Household</a></li>
+                            <li><a href="#">Child Birth</a></li>
+                        </ul>
+                </li>
+                <li>
+                    <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+                    <a href="#">About Us</a>
+                </li>
+                <li>
+                    <svg class="svg" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M162-120q-18 0-30-12t-12-30v-162q0-13 9-23.5t23-14.5l138-28q14-2 28.5 2.5T342-374l94 94q38-22 72-48.5t65-57.5q33-32 60.5-66.5T681-524l-97-98q-8-8-11-19t-1-27l26-140q2-13 13-22.5t25-9.5h162q18 0 30 12t12 30q0 125-54.5 247T631-329Q531-229 409-174.5T162-120Zm556-480q17-39 26-79t14-81h-88l-18 94 66 66ZM360-244l-66-66-94 20v88q41-3 81-14t79-28Zm358-356ZM360-244Z"/></svg>
+                    <a href="#">Contact Us</a>
+                </li>
+            </ul>
+            <div class="menuBar">
+                <svg class="svg" onclick="showMenu()" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+            </div>
+        </div>
+
+
+        <div class="menu">
+            <svg class="x-mark" onclick="hideMenu()" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            <ul class="links"> 
+                <li>
+                    <div class="sub-menu-2" onclick="showSubMenu (this)">                    
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+                        <a id="active" href="#">Home</a>
+                    </div>
+                    <ul class="sub-sub-menu">
+                        <li><a href="#">Dashboard</a></li>  
+                        <li><a href="#">Organizational Chart</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="sub-menu-2" onclick="showSubMenu (this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640H447l-80-80H160v480l96-320h684L837-217q-8 26-29.5 41.5T760-160H160Zm84-80h516l72-240H316l-72 240Zm0 0 72-240-72 240Zm-84-400v-80 80Z"/></svg>
+                        <a href="#">Files</a>
+                    </div>
+                    <ul class="sub-sub-menu">
+                        <li>
+                            <div class="files-sub-menu">
+                                <a href="#">Brgy. Certification</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="files-sub-menu">
+                                <a href="#">Pages</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"></svg>
+                            </div>
+                            <ul class="files-sub-sub-menu">
+                                <li><a href="#">Household</a></li>
+                                <li><a href="#">Child Birth</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="sub-menu-2" onclick="showSubMenu (this)">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M222-200 80-342l56-56 85 85 170-170 56 57-225 226Zm0-320L80-662l56-56 85 85 170-170 56 57-225 226Zm298 240v-80h360v80H520Zm0-320v-80h360v80H520Z"/></svg>
+                        <a href="#">E-survey</a>
+                    </div>
+                        <ul class="sub-sub-menu"> 
+                            <li><a href="#">Household</a></li>
+                            <li><a href="#">Child Birth</a></li>
+                        </ul>
+                </li>
+                <li>
+                    <div class="sub-menu-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+                        <a href="#">About Us</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="sub-menu-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M162-120q-18 0-30-12t-12-30v-162q0-13 9-23.5t23-14.5l138-28q14-2 28.5 2.5T342-374l94 94q38-22 72-48.5t65-57.5q33-32 60.5-66.5T681-524l-97-98q-8-8-11-19t-1-27l26-140q2-13 13-22.5t25-9.5h162q18 0 30 12t12 30q0 125-54.5 247T631-329Q531-229 409-174.5T162-120Zm556-480q17-39 26-79t14-81h-88l-18 94 66 66ZM360-244l-66-66-94 20v88q41-3 81-14t79-28Zm358-356ZM360-244Z"/></svg>
+                        <a href="#">Contact Us</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </nav>    
+
+        <main id="mainPage">
+            <div id="body-1">
+                <h3>Welcome to the local government portal</h3>
+                <button class="btn-1">Discover more</button>
+            </div>
+            
+                <div class="sub-body-2-1 sub-body-2">
+                    <h4>Bulletin:</h4>
+                    <ul class="list">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li    >
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    </ul>
+                </div>
+                <div class="sub-body-2-2 sub-body-2">
+                    <h4>On-duty:</h4>
+                    <ul class="list">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    </ul>
+               </div>
+                <div class="sub-body-2-3 sub-body-2">
+                    <h4>Weather:</h4>
+                    <ul class="list">
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    </ul>
+               </div>
+            
+            <div id="belowPage">
+                <footer></footer>
+            </div>
+        </main>
+
+<script src="index.js"></script>
+</body>
+</html>
